@@ -100,6 +100,14 @@ The key for an Affine cipher consists of 2 numbers (a and b), and assumes a 26 l
 
 ## Atbash Cipher
 
+The key for atbash is essentially to swap a letter with it's inverse i.e. A becomes Z, B becomes X, etc.
+
+1. ABCDEFGHIJKLMNOPQRSTUVWXYZ
+   ZYXWVUTSRQPONMLKJIHGFEDCBA
+
+2. Encrypt: y = 27 - x, where x is a letter of the message to encrypt and y is a letter of the encrypted message.
+
+3. Decrypt: x = 27 - y, where x is a letter of the message to encrypt and y is a letter of the encrypted message.
 
 ## Autokey Cipher
 ## Baconian Cipher

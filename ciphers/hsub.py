@@ -1,4 +1,7 @@
-class Porta():
+# Homophonic Substitution
+
+
+class Hsub():
     '''
     Attributes:
     - input

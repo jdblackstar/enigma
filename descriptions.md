@@ -63,8 +63,44 @@ The key for an ADFGX cipher is a 'key square' and a keyword. Similar to ADFGVX, 
  3. Read off enciphered pairs, left to right, top to bottom (reading)
 
     XD DF FX FD DA GG -> a  t  t  a  c  k
+
 ## Affine Cipher
+
+The key for an Affine cipher consists of 2 numbers (a and b), and assumes a 26 letter alphabet (m = 26). a should be relatively prime to m i.e. a = 15, m = 26. 
+
+1. Convert all the letters to numbers (a=0, b=1, ..., z=25)
+
+2. Let c be the ciphertext letter (output letter) and let p be the number representing a letter
+
+   encrypt:
+   c = ap + b (mod m), 1<=a<=m, 1<=b<=m
+
+   decrypt:
+   p = a^-1(c - b) (mod m)
+
+   find a^-1 by:
+   ax = 1 (mod m)  \  I think this can also be done by m - a
+
+3. encrypt: 'defend', key: a = 5, b = 7, m = 26 (Roman alphabet)
+   
+   - d -> 3
+   - c = (5 * p + 7) (mod 26)
+   - c = (5 * 3 + 7) (mod 26)
+   - c = 22 (mod 26)
+   - c = 22
+   - d(3) becomes w(22)
+
+4. decrypt: 'wbgbuwy', inverse of a: m - a (mod 26), 26 - 5 (mod 26), 21
+
+   - p = 21 (c - 7) (mod 26)  \  remember that b is still 7
+   - p - 21 (22 - 7) (mod 26)  \  plug in numberic value for w(22)
+   - p = 315 (mod 26)
+   - p = 3
+   - w(22) becomes d(3)
+
 ## Atbash Cipher
+
+
 ## Autokey Cipher
 ## Baconian Cipher
 ## Base64 Cipher

@@ -22,15 +22,16 @@ The key for an ADFGVX cipher is a 'key square' and a keyword.
     D G X G X G
     D G G V G D
 
- 2. Arrange key word alphabetically by column index, with all letter below attached
+ 2. Arrange keyword alphabetically by column index, with all letters below reamining attached
 
     A E G M N R
     X G D G G X
     G G D V D G
 
- 3. Read off enciphered pairs, left to right - top to bottom
+ 3. Read off enciphered pairs, left to right, top to bottom (reading)
 
     XG DG GX GG DV DG -> a  t  t  a  c  k
+    
 ## ADFGX Cipher
 ## Affine Cipher
 ## Atbash Cipher

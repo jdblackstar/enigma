@@ -156,6 +156,29 @@ The key is a keyword. e.g. 'FORTIFICATION'
    - D becomes I
 
 ## Baconian Cipher
+
+There is no key for this cipher. Instead, each letter is assigned a sequence of 5 characters. A binary system.
+
+1. Encoding table:
+
+   A = aaaaa  I/J = abaaa    R = baaaa
+   B = aaaab    K = abaab    S = baaab
+   C = aaaba    L = ababa    T = baaba
+   D = aaabb    M = ababb  U/V = baabb
+   E = aabaa    N = abbaa    W = babaa
+   F = aabab    O = abbab    X = babab
+   G = aabba    P = abbba    Y = babba
+   H = aabbb    Q = abbbb    Z = babbb
+
+2. Encode: "STRIKE NOW"
+
+   S     T     R     I     K     E     N     O     W 
+   baaab baaba baaaa abaaa abaab aabaa abbaa abbab babaa
+
+   Hold OFf uNtIl you hEar frOm mE agAin. wE May cOMpROmIse.
+
+   Capital letter in encoding message indicates a 'b' in the decoded message
+
 ## Base64 Cipher
 ## Beaufort Cipher
 ## Bifid Cipher

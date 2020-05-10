@@ -258,6 +258,17 @@ Key is a 25 letter "key square". can write key as one line, 1st row - 2nd row - 
 
 
 ## Caesar Cipher
+
+Very simple, key is increase or decrease to each letter of the original message
+
+1. Assign every letter a numerical value (A=0, B=1, ..., Z=25)
+2. Let x be the message ,y be the enciphered letter, and k be the key
+
+   y = x + k (mod 26)
+
+   decryption algorithm:
+   x = y - k (mod 26)
+
 ## Codes and Nomenclators Cipher
 ## Columnar Transposition Cipher
 ## Enigma Cipher

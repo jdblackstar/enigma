@@ -273,6 +273,56 @@ Very simple, key is increase or decrease to each letter of the original message
 ## Columnar Transposition Cipher
 ## Enigma Cipher
 ## Four-Square Cipher
+
+They key for a Four-Square Cipher is 4 5x5 matricies that do not contain j (merged with i). The upper-left and lower-right matricies are plain alphabet matricies. The upper-right and lower-left matricies are the cipher matricies. The key matrix can be combined into one line by 'reading it like a book'.
+
+   a b c d e   Z G P T F
+   f g h i k   O I H M U
+   l m n o p   W D R C N
+   q r s t u   Y K E Q A
+   v w x y z   X V S B L
+    
+   M F N B D   a b c d e
+   C R H S A   f g h i k
+   X Y O G V   l m n o p
+   I T U E W   q r s t u
+   L Q Z K P   v w x y z
+
+1. Break up the message into bigrams. To encode ATTACK AT DAWN --> AT TA CK AT DA WN
+
+2. Find the first bigram in the upper-left and lower-right matricies (alternate capitalization in each matrix)
+
+   A b c d e   Z G P T F
+   f g h i k   O I H M U
+   l m n o p   W D R C N
+   q r s t u   Y K E Q A
+   v w x y z   X V S B L
+ 
+   M F N B D   a b c d e
+   C R H S A   f g h i k
+   X Y O G V   l m n o p
+   I T U E W   q r s T u
+   L Q Z K P   v w x y z
+
+3. Find the letters in the cipher matricies that make a rectangle with the new existing letters.
+
+   a b c d e   Z G P T F
+   f g h i k   O I H M U
+   l m n o p   W D R C N
+   q r s t u   Y K E Q A
+   v w x y z   X V S B L
+ 
+   M F N B D   a b c d e
+   C R H S A   f g h i k
+   X Y O G V   l m n o p
+   I T U E W   q r s t u
+   L Q Z K P   v w x y z
+
+4. This means that the bigram AT becomes TI (upper-left becomes upper-right, lower-right becomes lower-left)
+
+   ATTACKATDAWN
+   TIYBFHTIZBSY
+
 ## Fractionated Morse Cipher
 ## Hill Cipher
 ## Homophonic Substitution Cipher

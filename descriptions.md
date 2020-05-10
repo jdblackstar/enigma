@@ -227,6 +227,36 @@ The key is a word. e.g. 'FORTIFICATION'
    Deciphering can be performed using the exact opposite steps (same algorithm)
    
 ## Bifid Cipher
+
+Key is a 25 letter "key square". can write key as one line, 1st row - 2nd row - 3rd row, etc.
+
+   1 2 3 4 5
+1| p h q g m
+2| e a y l n
+3| o f d x k
+4| r c v s z
+5| w b u t i
+
+1. Encryption: 
+
+   - each letter is translated into it's row and column value, written as row *over* column
+   - each chunk is divided into a repeating number of characters (the example is 5)
+   - append bottom row onto top row, keep period seperation
+   - each 2 letter pair corresponds to a row/column location for a letter (3,2 in example becomes f)
+
+   plaintext:   defend the east wall of the castle
+
+   step 1: row  323223 512 2245 5222 33 512 424522
+           col  312153 421 1244 1244 12 421 224441
+        
+   step 2:      32322 35122 24552 22335 12424 522 
+                31215 34211 24412 44124 21224 441 
+             
+   step 3:      3232231215 3512234211 2455224412 2233544124 1242421224 522441
+
+   step 4:      f f y h m  k h y c p  l i a s h  a d t r l  h c c h l  b l r
+
+
 ## Caesar Cipher
 ## Codes and Nomenclators Cipher
 ## Columnar Transposition Cipher

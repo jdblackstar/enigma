@@ -181,6 +181,51 @@ There is no key for this cipher. Instead, each letter is assigned a sequence of 
 
 ## Base64 Cipher
 ## Beaufort Cipher
+
+The key is a word. e.g. 'FORTIFICATION'
+
+1. Uses tabula recta, below:
+
+       A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+       ---------------------------------------------------
+   A   A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+   B   B C D E F G H I J K L M N O P Q R S T U V W X Y Z A
+   C   C D E F G H I J K L M N O P Q R S T U V W X Y Z A B
+   D   D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
+   E   E F G H I J K L M N O P Q R S T U V W X Y Z A B C D
+   F   F G H I J K L M N O P Q R S T U V W X Y Z A B C D E
+   G   G H I J K L M N O P Q R S T U V W X Y Z A B C D E F
+   H   H I J K L M N O P Q R S T U V W X Y Z A B C D E F G
+   I   I J K L M N O P Q R S T U V W X Y Z A B C D E F G H
+   J   J K L M N O P Q R S T U V W X Y Z A B C D E F G H I
+   K   K L M N O P Q R S T U V W X Y Z A B C D E F G H I J
+   L   L M N O P Q R S T U V W X Y Z A B C D E F G H I J K
+   M   M N O P Q R S T U V W X Y Z A B C D E F G H I J K L
+   N   N O P Q R S T U V W X Y Z A B C D E F G H I J K L M
+   O   O P Q R S T U V W X Y Z A B C D E F G H I J K L M N
+   P   P Q R S T U V W X Y Z A B C D E F G H I J K L M N O
+   Q   Q R S T U V W X Y Z A B C D E F G H I J K L M N O P
+   R   R S T U V W X Y Z A B C D E F G H I J K L M N O P Q
+   S   S T U V W X Y Z A B C D E F G H I J K L M N O P Q R
+   T   T U V W X Y Z A B C D E F G H I J K L M N O P Q R S
+   U   U V W X Y Z A B C D E F G H I J K L M N O P Q R S T
+   V   V W X Y Z A B C D E F G H I J K L M N O P Q R S T U
+   W   W X Y Z A B C D E F G H I J K L M N O P Q R S T U V
+   X   X Y Z A B C D E F G H I J K L M N O P Q R S T U V W
+   Y   Y Z A B C D E F G H I J K L M N O P Q R S T U V W X
+   Z   Z A B C D E F G H I J K L M N O P Q R S T U V W X Y
+
+2. Encipher: similar to autokey, except you keep repeating the key intead of beginning to message to be encrypted
+
+   FORTIFICATIONFORTIFICATIONFO   <- Keyword, repeated to be as long as the phrase
+   DEFENDTHEEASTWALLOFTHECASTLE   <- Phrase to encrypt
+
+   - Start in the column of the unciphered letter (D)
+   - Go down until you find the matching keyword letter (F)
+   - The enciphered letter will be the row index (C)
+
+   Deciphering can be performed using the exact opposite steps (same algorithm)
+   
 ## Bifid Cipher
 ## Caesar Cipher
 ## Codes and Nomenclators Cipher

@@ -357,6 +357,47 @@ M  --    Z  --..  =  -...-   end of word: xx
 3. Encipher each block of 3 characters, and you get: ESOAVVLJRSSTRX
 
 ## Hill Cipher
+
+The key is any matrix (as long as it's square) We'll use a 3x3 for the example enciphering
+
+   2  4  5
+   9  2  1
+   3 17  7
+
+1. To encipher our message (ATTACK AT DAWN), we need to break it into chunks of 3, first chunk is ATT
+
+2. Create a vector that corresponds to the letters: [0 19 19]
+
+3. Vector multiplication:
+
+   |2  4  5|  | 0|     |171|              |15|
+   |9  2  1|  |19|  =  | 57| (mod 26)  =  | 5|  =  'PFO'
+   |3 17  7|  |19|     |456|              |14|
+
+4. Deciphering: need to find an inverse matrix (mod 26) to use as our key (take PFO back to ATT, find inverse of k)
+
+   |2  4  5|
+   |9  2  1| = k
+   |3 17  7|
+
+   |15|                   | 0|
+   | 5| (k^-1) (mod 26) = |19| = 'ATT'
+   |14|                   |19|
+
+5. More maths
+
+        K = key matrix
+        d = determinant of K
+        I = identity matrix
+   adj(k) = adjugate matrix of k
+
+   K * K^-1 = I (mod 26)
+
+
+         ...to be continued
+
+
+
 ## Homophonic Substitution Cipher
 ## Lorenz Cipher
 ## Playfair Cipher

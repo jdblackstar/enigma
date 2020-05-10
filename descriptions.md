@@ -324,6 +324,38 @@ They key for a Four-Square Cipher is 4 5x5 matricies that do not contain j (merg
    TIYBFHTIZBSY
 
 ## Fractionated Morse Cipher
+
+The key for a Fractionated Morse cipher is a mixed alphabet that both parties must know. e.g. "ROUNDTABLECFGHIJKMPQSVWXYZ". 26 letters
+
+Morse Code:
+A  .-    N  -.    .  .-.-.-  1  .----
+B  -...  O  ---   ,  --..--  2  ..---
+C  -.-.  P  .--.  :  ---...  3  ...--
+D  -..   Q  --.-  "  .-..-.  4  ....-
+E  .     R  .-.   '  .----.  5  .....
+F  ..-.  S  ...   !  -.-.--  6  -....
+G  --.   T  -     ?  ..--..  7  --...
+H  ....  U  ..-   @  .--.-.  8  ---..
+I  ..    V  ...-  -  -....-  9  ----.
+J  .---  W  .--   ;  -.-.-.  0  -----
+K  -.-   X  -..-  (  -.--.           
+L  .-..  Y  -.--  )  -.--.-  end of character: x        
+M  --    Z  --..  =  -...-   end of word: xx 
+
+1. Turn plaintext into Morse code with "x" between characters and "xx" between words
+
+   plaintext:  defend the east
+   morse: -..x.x..-.x.x-.x-..xx-x....x.xx.x.-x...x-x
+
+2. Encipher using the keyword and the following table
+
+   R O U N D T A B L E C F G H I J K M P Q S V W X Y Z
+   . . . . . . . . . - - - - - - - - - x x x x x x x x
+   . . . - - - x x x . . . - - - x x x . . . - - - x x
+   . - x . - x . - x . - x . - x . - x . - x . - x . -
+
+3. Encipher each block of 3 characters, and you get: ESOAVVLJRSSTRX
+
 ## Hill Cipher
 ## Homophonic Substitution Cipher
 ## Lorenz Cipher

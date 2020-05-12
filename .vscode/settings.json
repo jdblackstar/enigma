@@ -1,6 +1,6 @@
 {
-    "python.pythonPath": "C:\\Users\\jblac\\anaconda3\\python.exe",
-    "python.linting.pylintEnabled": false,
-    "python.linting.pycodestyleEnabled": true,
+    "python.pythonPath": "C:\\Users\\jblac\\.virtualenvs\\enigmatic-gdOcTGxD\\Scripts\\python.exe",
+    "python.linting.pylintEnabled": true,
+    "python.linting.pycodestyleEnabled": false,
     "python.linting.enabled": true
 }
